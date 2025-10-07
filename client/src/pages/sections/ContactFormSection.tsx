@@ -34,34 +34,47 @@ const formFields = [
 const contactButtons = [
   {
     text: "Charitra2004@gmail.com",
-    bgColor: "bg-black",
+    bgColor: "bg-[#3559E0]",
     textColor: "text-white",
   },
   {
     text: "+91 9538233449",
-    bgColor: "bg-white",
-    textColor: "text-black",
+    bgColor: "bg-transparent",
+    textColor: "text-[#3559E0]",
   },
 ];
 
 export const ContactFormSection = (): JSX.Element => {
   return (
-    <section className="flex flex-col gap-5 p-5 bg-white rounded-[20px] overflow-hidden backdrop-blur-[20px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(20px)_brightness(100%)]">
-      <div className="flex items-center justify-between gap-5">
+    <section className="flex flex-col gap-5 p-5 bg-[#FFF7EA] rounded-[20px] overflow-hidden border-2 border-[#1C1C1C]">
+      <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-5">
         <img
-          className="flex-1 max-w-[660px] rounded-[10px] border-2 border-solid border-black object-cover"
+          className="w-full lg:flex-1 lg:max-w-[660px] rounded-[10px] border-2 border-solid border-[#1C1C1C] object-cover"
           alt="Image"
           src="/figmaAssets/image-186-1.png"
+          style={{
+            boxShadow: "4px 4px 0 #FFD447",
+          }}
         />
 
-        <div className="flex flex-col w-full max-w-[585px] items-start gap-[23px]">
-          <div className="flex flex-col items-center gap-2.5 w-full">
-            <h2 className="w-full h-[72px] [font-family:'Futura_PT-Demi',Helvetica] font-normal text-black text-7xl tracking-[1.44px] leading-[72px] flex items-center justify-center">
+        <div className="flex flex-col w-full lg:max-w-[585px] items-start gap-[23px] relative">
+          <div 
+            className="absolute -inset-4 bg-[#F0E6FF] rounded-lg -z-10 hidden lg:block"
+            style={{
+              transform: "translate(8px, 8px)",
+            }}
+          />
+          
+          <div className="flex flex-col items-center gap-2.5 w-full z-10">
+            <h2 className="w-full h-auto [font-family:'Futura_PT-Demi',Helvetica] font-normal text-[#1C1C1C] text-4xl sm:text-5xl lg:text-7xl tracking-[1.44px] leading-tight flex items-center justify-center">
               Contact me !
             </h2>
           </div>
 
-          <div className="flex flex-col min-w-80 items-center gap-6 p-6 w-full bg-white rounded-lg border border-solid border-[#d9d9d9]">
+          <div className="flex flex-col min-w-80 items-center gap-6 p-6 w-full bg-white rounded-lg border-2 border-solid border-[#3559E0] z-10"
+               style={{
+                 boxShadow: "4px 4px 0 rgba(53, 89, 224, 0.3)",
+               }}>
             {formFields.map((field) => (
               <div
                 key={field.id}
@@ -69,7 +82,7 @@ export const ContactFormSection = (): JSX.Element => {
               >
                 <Label
                   htmlFor={field.id}
-                  className="font-body-base font-[number:var(--body-base-font-weight)] text-[#1e1e1e] text-[length:var(--body-base-font-size)] tracking-[var(--body-base-letter-spacing)] leading-[var(--body-base-line-height)] [font-style:var(--body-base-font-style)]"
+                  className="[font-family:'Futura_PT-Book',Helvetica] font-normal text-[#1C1C1C] text-base"
                 >
                   {field.label}
                 </Label>
@@ -78,14 +91,14 @@ export const ContactFormSection = (): JSX.Element => {
                   <Input
                     id={field.id}
                     placeholder={field.placeholder}
-                    className="min-w-60 px-4 py-3 w-full bg-white rounded-lg border border-solid border-[#d9d9d9] font-single-line-body-base font-[number:var(--single-line-body-base-font-weight)] text-[#b3b3b3] text-[length:var(--single-line-body-base-font-size)] tracking-[var(--single-line-body-base-letter-spacing)] leading-[var(--single-line-body-base-line-height)] [font-style:var(--single-line-body-base-font-style)]"
+                    className="min-w-60 px-4 py-3 w-full bg-[#FFF7EA] rounded-lg border-2 border-solid border-[#3559E0] [font-family:'Futura_PT-Book',Helvetica] font-normal text-[#1C1C1C] text-base placeholder:text-[#b3b3b3]"
                   />
                 ) : (
                   <div className="relative w-full">
                     <Textarea
                       id={field.id}
                       placeholder={field.placeholder}
-                      className="min-w-60 min-h-20 px-4 py-3 w-full bg-white rounded-lg border border-solid border-[#d9d9d9] font-body-base font-[number:var(--body-base-font-weight)] text-[#b3b3b3] text-[length:var(--body-base-font-size)] tracking-[var(--body-base-letter-spacing)] leading-[var(--body-base-line-height)] [font-style:var(--body-base-font-style)] resize-none"
+                      className="min-w-60 min-h-20 px-4 py-3 w-full bg-[#FFF7EA] rounded-lg border-2 border-solid border-[#3559E0] [font-family:'Futura_PT-Book',Helvetica] font-normal text-[#1C1C1C] text-base placeholder:text-[#b3b3b3] resize-none"
                     />
                     <img
                       className="absolute right-[7px] bottom-2 w-[7px] h-[7px] pointer-events-none"
@@ -98,24 +111,32 @@ export const ContactFormSection = (): JSX.Element => {
             ))}
 
             <div className="flex items-center gap-4 w-full">
-              <Button className="flex-1 h-auto items-center justify-center gap-2 p-3 bg-[#2c2c2c] rounded-lg overflow-hidden border border-solid hover:bg-[#3c3c3c]">
-                <span className="font-single-line-body-base font-[number:var(--single-line-body-base-font-weight)] text-neutral-100 text-[length:var(--single-line-body-base-font-size)] tracking-[var(--single-line-body-base-letter-spacing)] leading-[var(--single-line-body-base-line-height)] whitespace-nowrap [font-style:var(--single-line-body-base-font-style)]">
-                  Submit
-                </span>
+              <Button 
+                className="flex-1 h-auto items-center justify-center gap-2 p-3 bg-[#FF6B3D] text-white rounded-lg overflow-hidden border-2 border-[#1C1C1C] hover:bg-[#FF8B5D] transition-all [font-family:'Futura_PT-Demi',Helvetica] font-bold text-lg tracking-[1px] uppercase"
+                style={{
+                  boxShadow: "3px 3px 0 #FFD447",
+                }}
+              >
+                Submit
               </Button>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="flex items-center justify-center gap-2 w-full">
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-2 w-full">
         {contactButtons.map((button, index) => (
           <Button
             key={index}
-            className={`h-auto flex-1 max-w-[661px] px-2.5 py-3 ${button.bgColor} rounded-[10px] border border-solid border-black hover:opacity-90`}
+            className={`h-auto flex-1 w-full sm:max-w-[661px] px-2.5 py-3 ${button.bgColor} rounded-[10px] border-2 border-solid border-[#3559E0] hover:opacity-90 transition-all`}
+            style={
+              button.bgColor === "bg-transparent"
+                ? { boxShadow: "3px 3px 0 rgba(53, 89, 224, 0.3)" }
+                : { boxShadow: "3px 3px 0 #FFD447" }
+            }
           >
             <span
-              className={`[font-family:'Futura_PT-Book',Helvetica] font-normal ${button.textColor} text-2xl tracking-[0.48px] leading-[normal]`}
+              className={`[font-family:'Futura_PT-Book',Helvetica] font-normal ${button.textColor} text-lg sm:text-2xl tracking-[0.48px] leading-[normal]`}
             >
               {button.text}
             </span>
