@@ -112,7 +112,7 @@ export const ExperienceSection = (): JSX.Element => {
                   onClick={() => handleItemClick(index)}
                   className={`w-full flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-2 sm:py-3 rounded-[12px] transition-all mb-1 last:mb-0 ${
                     selectedIndex === index
-                      ? "bg-[#FF6B3D] text-white"
+                      ? "bg-[#D84315] text-white"
                       : "bg-transparent text-white hover:bg-white/10"
                   }`}
                   style={

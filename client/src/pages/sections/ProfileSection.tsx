@@ -23,7 +23,7 @@ export const ProfileSection = (): JSX.Element => {
         <TabsList className="w-full h-auto p-5 bg-transparent rounded-none border-none grid grid-cols-3 sm:grid-cols-1 md:grid-cols-3 gap-[5px]">
           <TabsTrigger
             value="skills"
-            className="h-10 rounded-[10px] border-2 border-solid border-[#1C1C1C] data-[state=active]:bg-[#FF6B3D] data-[state=active]:text-white data-[state=inactive]:bg-[#FFF7EA] data-[state=inactive]:text-[#1C1C1C] data-[state=inactive]:border-[#3559E0] [font-family:'Futura_PT-Book',Helvetica] font-normal text-lg sm:text-xl md:text-2xl tracking-[0.48px] leading-[normal] transition-all"
+            className="h-10 rounded-[10px] border-2 border-solid border-[#1C1C1C] data-[state=active]:bg-[#D84315] data-[state=active]:text-white data-[state=inactive]:bg-[#FFF7EA] data-[state=inactive]:text-[#1C1C1C] data-[state=inactive]:border-[#3559E0] [font-family:'Futura_PT-Book',Helvetica] font-normal text-lg sm:text-xl md:text-2xl tracking-[0.48px] leading-[normal] transition-all"
             style={{
               boxShadow: "3px 3px 0 #FFD447",
             }}
@@ -32,7 +32,7 @@ export const ProfileSection = (): JSX.Element => {
           </TabsTrigger>
           <TabsTrigger
             value="projects"
-            className="h-10 rounded-[10px] border-2 border-solid border-[#1C1C1C] data-[state=active]:bg-[#FF6B3D] data-[state=active]:text-white data-[state=inactive]:bg-[#FFF7EA] data-[state=inactive]:text-[#1C1C1C] data-[state=inactive]:border-[#3559E0] [font-family:'Futura_PT-Book',Helvetica] font-normal text-lg sm:text-xl md:text-2xl tracking-[0.48px] leading-[normal] transition-all"
+            className="h-10 rounded-[10px] border-2 border-solid border-[#1C1C1C] data-[state=active]:bg-[#D84315] data-[state=active]:text-white data-[state=inactive]:bg-[#FFF7EA] data-[state=inactive]:text-[#1C1C1C] data-[state=inactive]:border-[#3559E0] [font-family:'Futura_PT-Book',Helvetica] font-normal text-lg sm:text-xl md:text-2xl tracking-[0.48px] leading-[normal] transition-all"
             style={{
               boxShadow: "3px 3px 0 #FFD447",
             }}
@@ -41,7 +41,7 @@ export const ProfileSection = (): JSX.Element => {
           </TabsTrigger>
           <TabsTrigger
             value="education"
-            className="h-10 rounded-[10px] border-2 border-solid border-[#1C1C1C] data-[state=active]:bg-[#FF6B3D] data-[state=active]:text-white data-[state=inactive]:bg-[#FFF7EA] data-[state=inactive]:text-[#1C1C1C] data-[state=inactive]:border-[#3559E0] [font-family:'Futura_PT-Book',Helvetica] font-normal text-lg sm:text-xl md:text-2xl tracking-[0.48px] leading-[normal] transition-all"
+            className="h-10 rounded-[10px] border-2 border-solid border-[#1C1C1C] data-[state=active]:bg-[#D84315] data-[state=active]:text-white data-[state=inactive]:bg-[#FFF7EA] data-[state=inactive]:text-[#1C1C1C] data-[state=inactive]:border-[#3559E0] [font-family:'Futura_PT-Book',Helvetica] font-normal text-lg sm:text-xl md:text-2xl tracking-[0.48px] leading-[normal] transition-all"
             style={{
               boxShadow: "3px 3px 0 #FFD447",
             }}

@@ -112,7 +112,7 @@ export const ContactFormSection = (): JSX.Element => {
 
             <div className="flex items-center gap-4 w-full">
               <Button 
-                className="flex-1 h-auto items-center justify-center gap-2 p-3 bg-[#FF6B3D] text-white rounded-lg overflow-hidden border-2 border-[#1C1C1C] hover:bg-[#FF8B5D] transition-all [font-family:'Futura_PT-Demi',Helvetica] font-bold text-lg tracking-[1px] uppercase"
+                className="flex-1 h-auto items-center justify-center gap-2 p-3 bg-[#D84315] text-white rounded-lg overflow-hidden border-2 border-[#1C1C1C] hover:bg-[#E64A19] transition-all [font-family:'Futura_PT-Demi',Helvetica] font-bold text-lg tracking-[1px] uppercase"
                 style={{
                   boxShadow: "3px 3px 0 #FFD447",
                 }}

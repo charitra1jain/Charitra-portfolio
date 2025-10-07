@@ -9,7 +9,10 @@ export const HeroSection = (): JSX.Element => {
           <div className="flex flex-col items-start gap-6">
             <h1 className="[font-family:'Futura_PT-Demi',Helvetica] font-bold text-[#1C1C1C] text-5xl lg:text-[64px] tracking-[1.5px] leading-[1.1]">
               Hi I'm{" "}
-              <span className="text-[#FF6B3D]">Charitra Jain</span>
+              <span className="text-[#1C1C1C] relative inline-block font-extrabold">
+                Charitra Jain
+                <span className="absolute bottom-0 left-0 w-full h-1 bg-[#1C1C1C]"></span>
+              </span>
             </h1>
 
             <p className="[font-family:'Futura_PT-Book',Helvetica] font-medium text-[#1C1C1C] text-xl lg:text-2xl tracking-[0.5px] leading-normal opacity-80">
@@ -17,7 +20,7 @@ export const HeroSection = (): JSX.Element => {
             </p>
           </div>
 
-          <div className="w-full max-w-[500px] h-[2px] bg-gradient-to-r from-[#FF6B3D] to-transparent"></div>
+          <div className="w-full max-w-[500px] h-[2px] bg-gradient-to-r from-[#1C1C1C] to-transparent"></div>
 
           <p className="[font-family:'Futura_PT-Book',Helvetica] font-normal text-[#1C1C1C] text-lg lg:text-xl text-justify tracking-[0.4px] leading-[1.6] max-w-[540px]">
             A driven student leader with a proven record in event management,
@@ -28,7 +31,7 @@ export const HeroSection = (): JSX.Element => {
 
           <div className="flex flex-wrap gap-5 mt-4">
             <button
-              className="relative w-full sm:w-[264px] h-[64px] bg-[#FF6B3D] text-white rounded-[18px] border-[3px] border-solid border-[#1C1C1C] [font-family:'Futura_PT-Demi',Helvetica] font-bold text-xl tracking-[1.5px] uppercase transition-all duration-200 hover:translate-x-[2px] hover:translate-y-[2px]"
+              className="relative w-full sm:w-[264px] h-[64px] bg-[#D84315] text-white rounded-[18px] border-[3px] border-solid border-[#1C1C1C] [font-family:'Futura_PT-Demi',Helvetica] font-bold text-xl tracking-[1.5px] uppercase transition-all duration-200 hover:translate-x-[2px] hover:translate-y-[2px]"
               style={{
                 boxShadow: "4px 4px 0 #FFD447",
               }}

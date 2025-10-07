@@ -27,9 +27,9 @@ export const SocialLinksSection = (): JSX.Element => {
            backgroundImage: "radial-gradient(circle, rgba(28, 28, 28, 0.02) 1px, transparent 1px)",
            backgroundSize: "20px 20px",
          }}>
-      <h2 className="flex items-center justify-center w-full sm:w-[200px] h-9 [font-family:'Futura_PT-Medium',Helvetica] font-medium text-[#FF6B3D] text-3xl sm:text-4xl tracking-[0.72px] leading-9 whitespace-nowrap relative">
+      <h2 className="flex items-center justify-center w-full sm:w-[200px] h-9 [font-family:'Futura_PT-Medium',Helvetica] font-medium text-[#1C1C1C] text-3xl sm:text-4xl tracking-[0.72px] leading-9 whitespace-nowrap relative">
         Socials
-        <div className="absolute bottom-0 left-0 w-full h-[2px] bg-[#FF6B3D]"></div>
+        <div className="absolute bottom-0 left-0 w-full h-[2px] bg-[#1C1C1C]"></div>
       </h2>
 
       {socialLinks.map((link, index) => (

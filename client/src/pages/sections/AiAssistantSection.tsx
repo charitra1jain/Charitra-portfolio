@@ -16,7 +16,7 @@ export const AiAssistantSection = (): JSX.Element => {
         <div className="flex flex-col w-full items-center gap-12 sm:gap-16 lg:gap-[76px]">
           <div className="flex flex-col w-full items-center justify-center gap-5">
             <div className="flex flex-col w-full items-start gap-2.5">
-              <div className="flex w-full h-auto sm:h-[87px] items-center gap-3 sm:gap-5 px-4 sm:px-5 py-4 sm:py-6 bg-[#FF6B3D] rounded-[20px_20px_0px_0px] border-b-2 border-solid border-[#1C1C1C]">
+              <div className="flex w-full h-auto sm:h-[87px] items-center gap-3 sm:gap-5 px-4 sm:px-5 py-4 sm:py-6 bg-[#D84315] rounded-[20px_20px_0px_0px] border-b-2 border-solid border-[#1C1C1C]">
                 <img
                   className="w-10 sm:w-[61px] h-7 sm:h-[41.97px]"
                   alt="Vector"
@@ -78,7 +78,7 @@ export const AiAssistantSection = (): JSX.Element => {
                     />
                   </div>
                   <Button 
-                    className="w-[60px] h-[60px] p-0 bg-[#FF6B3D] border-2 border-[#1C1C1C] rounded-[10px] hover:bg-[#FF8B5D] transition-all"
+                    className="w-[60px] h-[60px] p-0 bg-[#D84315] border-2 border-[#1C1C1C] rounded-[10px] hover:bg-[#E64A19] transition-all"
                     style={{
                       boxShadow: "3px 3px 0 #FFD447",
                     }}
