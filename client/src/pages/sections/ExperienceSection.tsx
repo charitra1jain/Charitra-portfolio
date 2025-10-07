@@ -66,22 +66,18 @@ const experienceData = [
 ];
 
 export const ExperienceSection = (): JSX.Element => {
-  const [expandedCards, setExpandedCards] = useState<Set<number>>(new Set());
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
-  const toggleCard = (index: number) => {
-    setExpandedCards((prev) => {
-      const newSet = new Set(prev);
-      if (newSet.has(index)) {
-        newSet.delete(index);
-      } else {
-        newSet.add(index);
-      }
-      return newSet;
-    });
+  const handleItemClick = (index: number) => {
+    if (selectedIndex === index) {
+      setSelectedIndex(null);
+    } else {
+      setSelectedIndex(index);
+    }
   };
 
   return (
-    <Card className="w-full bg-white rounded-[20px] backdrop-blur-[20px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(20px)_brightness(100%)] border-0">
+    <Card className="w-full bg-white rounded-[20px] backdrop-blur-[20px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(20px)_brightness(100%)] border-2 border-white">
       <CardContent className="p-5">
         <div className="flex items-center gap-2.5 px-2.5 py-[3px] bg-black rounded-[10px] border border-solid mb-5">
           <div className="[font-family:'Futura_PT-Book',Helvetica] font-normal text-white text-2xl tracking-[0.48px] leading-[normal] py-1.5">
@@ -89,46 +85,66 @@ export const ExperienceSection = (): JSX.Element => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-4">
-          {experienceData.map((experience, index) => (
-            <Card
-              key={index}
-              className="bg-[#e5e5e5] rounded-[20px] border-2 border-black transition-all duration-200"
-            >
-              <CardContent className="p-5">
-                <div
-                  className="flex items-center justify-between cursor-pointer"
-                  onClick={() => toggleCard(index)}
+        {selectedIndex === null ? (
+          <div className="grid grid-cols-3 gap-3">
+            {experienceData.map((experience, index) => (
+              <button
+                key={index}
+                onClick={() => handleItemClick(index)}
+                className="flex items-center gap-3 px-5 py-3 bg-white rounded-[15px] border border-white hover:bg-gray-50 transition-colors"
+              >
+                <PlusCircleIcon className="w-8 h-8 flex-shrink-0" />
+                <div className="flex-1 text-left [font-family:'Futura_PT-Book',Helvetica] font-normal text-black text-lg tracking-[0.40px] leading-[normal]">
+                  {experience.title}
+                </div>
+              </button>
+            ))}
+          </div>
+        ) : (
+          <div className="flex gap-4">
+            <div className="w-1/3 bg-black rounded-[15px] border border-white p-2">
+              {experienceData.map((experience, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleItemClick(index)}
+                  className={`w-full flex items-center gap-3 px-4 py-3 rounded-[12px] transition-all mb-1 last:mb-0 ${
+                    selectedIndex === index
+                      ? "bg-white text-black"
+                      : "bg-transparent text-white hover:bg-white/10"
+                  }`}
                 >
-                  <div className="[font-family:'Futura_PT-Book',Helvetica] font-normal text-black text-xl tracking-[0.40px] leading-[normal]">
+                  {selectedIndex === index ? (
+                    <MinusCircleIcon className="w-6 h-6 flex-shrink-0" />
+                  ) : (
+                    <PlusCircleIcon className="w-6 h-6 flex-shrink-0" />
+                  )}
+                  <div className="flex-1 text-left [font-family:'Futura_PT-Book',Helvetica] font-normal text-base tracking-[0.40px] leading-[normal]">
                     {experience.title}
                   </div>
-                  {expandedCards.has(index) ? (
-                    <MinusCircleIcon className="w-8 h-8 flex-shrink-0" />
-                  ) : (
-                    <PlusCircleIcon className="w-8 h-8 flex-shrink-0" />
-                  )}
-                </div>
+                </button>
+              ))}
+            </div>
 
-                {expandedCards.has(index) && (
-                  <div className="mt-4 space-y-2">
-                    {experience.skills.map((skill, skillIndex) => (
-                      <div
-                        key={skillIndex}
-                        className="flex items-center gap-2.5"
-                      >
-                        <PlusCircleIcon className="w-6 h-6 flex-shrink-0" />
-                        <div className="[font-family:'Futura_PT-Book',Helvetica] font-normal text-black text-lg tracking-[0.36px] leading-[normal]">
-                          {skill}
-                        </div>
-                      </div>
-                    ))}
+            <div className="flex-1 bg-[#e5e5e5] rounded-[15px] border border-white p-6">
+              <div className="[font-family:'Futura_PT-Book',Helvetica] font-normal text-black text-xl tracking-[0.40px] leading-[normal] mb-4">
+                {experienceData[selectedIndex].title}
+              </div>
+              <div className="space-y-3">
+                {experienceData[selectedIndex].skills.map((skill, skillIndex) => (
+                  <div
+                    key={skillIndex}
+                    className="flex items-center gap-3"
+                  >
+                    <PlusCircleIcon className="w-6 h-6 flex-shrink-0" />
+                    <div className="[font-family:'Futura_PT-Book',Helvetica] font-normal text-black text-base tracking-[0.36px] leading-[normal]">
+                      {skill}
+                    </div>
                   </div>
-                )}
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
       </CardContent>
     </Card>
   );
